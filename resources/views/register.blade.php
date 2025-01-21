@@ -19,7 +19,8 @@
             {{-- <h4 class="mb-3">Todo List</h4> --}}
             <h1 class="mb-4">Registration</h1>
             
-            <form action="" method="POST">
+            <form action="{{ route('register') }}" method="POST">
+                @csrf
                 <div class="form-group">
                     <label for="name"><strong>Name</strong></label>
                     <input type="text" id="name" name="name" class="form-control" placeholder="Enter your name" required>
@@ -33,15 +34,15 @@
                     <input type="password" id="password" name="password" class="form-control" placeholder="Enter your password" required>
                 </div>
                 <div class="form-group">
-                    <label for="confirm_password"><strong>Confirm Password:</strong></label>
-                    <input type="password" id="confirm_password" name="confirm_password" class="form-control" placeholder="Enter your password" required>
+                    <label for="password_confirmation"><strong>Confirm Password:</strong></label>
+                    <input type="password" id="password_confirmation" name="password_confirmation" class="form-control" placeholder="Enter your password" required>
                 </div>
-
+                
                 <button type="submit" class="btn btn-danger btn-block">Register</button>
             </form>
 
             <div class="register mt-3">
-                <p>Already have an account? <a href="#">Login</a></p>
+                <p>Already have an account? <a href="{{ route('login') }}">Login</a></p>
             </div>
         </div>
     </div>

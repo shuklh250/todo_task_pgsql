@@ -28,12 +28,12 @@
                     <button type="submit" class="btn btn-danger btn-block">Add</button>
                 </div>
             </form>
-
+{{-- 
             <div class=" list-task mt-3">
                 <li>List 1</li>
                 <li>List 2</li>
                 <li>List 3</li>
-            </div>
+            </div> --}}
         </div>
     </div>
 

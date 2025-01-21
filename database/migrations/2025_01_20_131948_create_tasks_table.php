@@ -15,7 +15,8 @@ return new class extends Migration
             $table->id();
             $table->string('task');
             $table->boolean('is_complete')->default(false);
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade')->nullable();
+            $table->unsignedBigInteger('user_id')->after('id');
+            $table->foxreign('user_id')->references('id')->on('users')->onDelete('cascade')->nullable();
             $table->timestamps();
         });
     }
